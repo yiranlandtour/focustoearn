@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::program::invoke;
 use anchor_spl::token;
-use anchor_spl::token::{MintTo, Token};
+use anchor_spl::token::{MintTo, Token,Mint,TokenAccount};
 use mpl_token_metadata::instruction::{create_master_edition_v3, create_metadata_accounts_v2};
 
 declare_id!("8LDy3uUATrq46xPaz4dc5hLJeNTRuuXUd7Fqmy5Y8CJ2");
@@ -18,6 +18,29 @@ pub mod contract {
         Ok(())
     }
 
+    pub fn task_mint_to(ctx: Context<TaskMintTo>, authority_account_bump: u8, amount: u64) -> Result<()> {
+        let receiver = &mut ctx.accounts.token_receiver;
+        let mint = &mut ctx.accounts.mint;
+        let pda_authority = & ctx.accounts.pda_authority;
+        let token_program = & ctx.accounts.token_program;
+        // msg!(receiver.amount, 0, 0, 0, 0);
+        let cpi_accounts = token::MintTo{
+            mint: mint.to_account_info(),
+            to: receiver.to_account_info(),
+            authority: pda_authority.to_account_info(),
+        };
+        let authority_seeds = &[&b"protocoppia"[..], &[authority_account_bump]];
+        token::mint_to(
+            CpiContext::new_with_signer(
+                token_program.to_account_info(), cpi_accounts, 
+                &[&authority_seeds[..]]
+            ), 
+            amount
+        )?;
+        // msg!(receiver.amount, 0, 0, 0, 0);
+        Ok(())
+    }
+
     pub fn nft_transfer(ctx: Context<Initialize>) -> Result<()>{
         Ok(())
     }
@@ -25,7 +48,7 @@ pub mod contract {
     pub fn withdraw_token(ctx: Context<Initialize>) -> Result<()>{
         Ok(())
     }
-    
+
     pub fn mint_nft(
         ctx: Context<MintNFT>,
         creator_key: Pubkey,
@@ -179,3 +202,26 @@ pub struct MintNFT<'info> {
 
 
 
+#[derive(Accounts)]
+#[instruction(bump: u8, amount: u64)]
+pub struct TaskMintTo<'info> {
+    #[account(mut, signer)]
+    pub requester: AccountInfo<'info>,
+    #[account(mut)]
+    pub token_receiver: Account<'info, TokenAccount>,
+    #[account(mut)]
+    pub mint: Account<'info, Mint>,
+    #[account(
+        init,
+        seeds = [b"focus".as_ref()],
+        bump = bump,
+        payer = requester,
+        token::mint = mint,
+        token::authority = pda_authority,
+    )]
+    pub pda_authority: Account<'info, TokenAccount>,
+    pub system_program: Program<'info, System>,
+    pub rent: Sysvar<'info, Rent>,
+    #[account(executable)]
+    pub token_program: Program<'info, Token>,
+}
