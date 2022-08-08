@@ -1,10 +1,10 @@
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::program::invoke;
 use anchor_spl::token;
-use anchor_spl::token::{MintTo, Token,Mint,TokenAccount};
+use anchor_spl::token::{MintTo, Token,Mint,TokenAccount,Transfer};
 use mpl_token_metadata::instruction::{create_master_edition_v3, create_metadata_accounts_v2};
 
-declare_id!("7yPAXRqDRNsKBy7nroG66ynsr6P1LQYMBBDZaDdPD1ev");
+declare_id!("BPbB2KWF6bjtjCsrFKd3buFM11ovSGWnQWohrgSfq1LU");
 
 #[program]
 pub mod contract {
@@ -18,28 +18,41 @@ pub mod contract {
         Ok(())
     }
 
-    // pub fn task_mint_to(ctx: Context<TaskMintTo>, authority_account_bump: u8, amount: u64) -> Result<()> {
-        // let receiver = &mut ctx.accounts.token_receiver;
-        // let mint = &mut ctx.accounts.mint;
-        // let pda_authority = & ctx.accounts.pda_authority;
-        // let token_program = & ctx.accounts.token_program;
-        // // msg!(receiver.amount, 0, 0, 0, 0);
-        // let cpi_accounts = token::MintTo{
-        //     mint: mint.to_account_info(),
-        //     to: receiver.to_account_info(),
-        //     authority: pda_authority.to_account_info(),
-        // };
-        // let authority_seeds = &[&b"protocoppia"[..], &[authority_account_bump]];
-        // token::mint_to(
-        //     CpiContext::new_with_signer(
-        //         token_program.to_account_info(), cpi_accounts, 
-        //         &[&authority_seeds[..]]
-        //     ), 
-        //     amount
-        // )?;
-        // msg!(receiver.amount, 0, 0, 0, 0);
-        // Ok(())
-    // }
+    pub fn mint_token(ctx: Context<MintToken>,) -> Result<()> {
+        // Create the MintTo struct for our context
+        let cpi_accounts = MintTo {
+            mint: ctx.accounts.mint.to_account_info(),
+            to: ctx.accounts.token_account.to_account_info(),
+            authority: ctx.accounts.authority.to_account_info(),
+        };
+        
+        let cpi_program = ctx.accounts.token_program.to_account_info();
+        // Create the CpiContext we need for the request
+        let cpi_ctx = CpiContext::new(cpi_program, cpi_accounts);
+
+        // Execute anchor's helper function to mint tokens
+        token::mint_to(cpi_ctx, 10)?;
+        
+        Ok(())
+    }
+
+    pub fn transfer_token(ctx: Context<TransferToken>) -> Result<()> {
+        // Create the Transfer struct for our context
+        let transfer_instruction = Transfer{
+            from: ctx.accounts.from.to_account_info(),
+            to: ctx.accounts.to.to_account_info(),
+            authority: ctx.accounts.from_authority.to_account_info(),
+        };
+         
+        let cpi_program = ctx.accounts.token_program.to_account_info();
+        // Create the Context for our Transfer request
+        let cpi_ctx = CpiContext::new(cpi_program, transfer_instruction);
+
+        // Execute anchor's helper function to transfer tokens
+        anchor_spl::token::transfer(cpi_ctx, 5)?;
+ 
+        Ok(())
+    }
 
     pub fn nft_transfer(ctx: Context<Initialize>) -> Result<()>{
         Ok(())
@@ -200,11 +213,37 @@ pub struct MintNFT<'info> {
 }
 
 
+#[derive(Accounts)]
+pub struct MintToken<'info> {
+    /// CHECK: This is the token that we want to mint
+    #[account(mut)]
+    pub mint: UncheckedAccount<'info>,
+    pub token_program: Program<'info, Token>,
+    /// CHECK: This is the token account that we want to mint tokens to
+    #[account(mut)]
+    pub token_account: UncheckedAccount<'info>,
+    /// CHECK: the authority of the mint account
+    #[account(mut)]
+    pub authority: AccountInfo<'info>,
+}
 
+#[derive(Accounts)]
+pub struct TransferToken<'info> {
+    pub token_program: Program<'info, Token>,
+    /// CHECK: The associated token account that we are transferring the token from
+    #[account(mut)]
+    pub from: UncheckedAccount<'info>,
+    /// CHECK: The associated token account that we are transferring the token to
+    #[account(mut)]
+    pub to: AccountInfo<'info>,
+    // the authority of the from account 
+    pub from_authority: Signer<'info>,
+}
 
 #[derive(Accounts)]
 #[instruction( amount: u64)]
 pub struct TaskMintTo<'info> {
+    /// CHECK: The associated token account that we are transferring the token to
     #[account(mut, signer)]
     pub requester: AccountInfo<'info>,
     #[account(mut)]
