@@ -4,7 +4,7 @@ use anchor_spl::token;
 use anchor_spl::token::{MintTo, Token,Mint,TokenAccount,Transfer};
 use mpl_token_metadata::instruction::{create_master_edition_v3, create_metadata_accounts_v2};
 
-declare_id!("BPbB2KWF6bjtjCsrFKd3buFM11ovSGWnQWohrgSfq1LU");
+declare_id!("6mykzhCRDzJvFdfc6GxUWHgTEG5R6qcBQpY6UfK2Kg8n");
 
 #[program]
 pub mod contract {
@@ -18,7 +18,7 @@ pub mod contract {
         Ok(())
     }
 
-    pub fn mint_token(ctx: Context<MintToken>,) -> Result<()> {
+    pub fn mint_token(ctx: Context<MintToken>,amount: u64) -> Result<()> {
         // Create the MintTo struct for our context
         let cpi_accounts = MintTo {
             mint: ctx.accounts.mint.to_account_info(),
@@ -31,7 +31,7 @@ pub mod contract {
         let cpi_ctx = CpiContext::new(cpi_program, cpi_accounts);
 
         // Execute anchor's helper function to mint tokens
-        token::mint_to(cpi_ctx, 10)?;
+        token::mint_to(cpi_ctx, amount)?;
         
         Ok(())
     }
