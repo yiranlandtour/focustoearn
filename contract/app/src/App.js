@@ -1,9 +1,12 @@
 import './App.css';
 import { Connection, PublicKey } from '@solana/web3.js';
-import { Program, Provider, web3, BN } from '@project-serum/anchor';
+import { Program, AnchorProvider, web3, BN } from '@project-serum/anchor';
 import { TokenInstructions } from '@project-serum/serum';
 import { getTokenAccount, getMintInfo } from '@project-serum/common';
 import idl from './idl.json';
+import fs from 'mz/fs';
+const anchor = require('@project-serum/anchor');
+// const {Keypair} = require("@solana/web3.js");
 
 const opts = {
   // preflightCommitment: "confirmed", // Getting this error "Transaction simulation failed: Blockhash not found "
@@ -11,6 +14,10 @@ const opts = {
 }
 const programID = new PublicKey(idl.metadata.address);
 
+const filename = "/Users/taoyiran/.config/solana/id.json";
+const secretKey = Uint8Array.from([
+]);
+// const resp = web3.Keypair.fromSecretKey(secretKey);
 function App() {
   let mint = null;
   let from = null;
@@ -20,17 +27,26 @@ function App() {
     const network = "https://api.devnet.solana.com";
     const connection = new Connection(network, opts.preflightCommitment);
     const wallet = window.solana;
-
-    const provider = new Provider(
+    // const wallet = resp;
+    console.log("wallet")
+    console.log(wallet)
+    const provider = new AnchorProvider(
       connection, wallet, opts.preflightCommitment,
     );
+    // anchor.getProvider = anchor.Provider.env();
     return provider;
   }
 
   async function connectWallet() {
     console.log("connect");
+    // var data = await fs.readFile(filename, 'utf8');
+    // var  config = JSON.parse(data);
+    // console.log(config)
     try {
+        // process.env.ANCHOR_WALLET = '/Users/taoyiran/.config/solana/id.json';
         const resp = await window.solana.connect();
+        // console.log(secretKey)
+        // var resp = web3.Keypair.fromSecretKey(secretKey);
         console.log("Connected! Public Key: ", resp.publicKey.toString());
     } catch (err) {
         console.log(err);
@@ -45,17 +61,20 @@ function App() {
 
   async function initializeState() {
     const provider = await getProvider();
-
+    anchor.setProvider(provider);
+    var resp = provider.wallet;
+    console.log("provider");
+    console.log(provider)
     // Takes a few sec per tx
     mint = await createMint(provider);
-    from = await createTokenAccount(provider, mint, provider.wallet.publicKey);
-    to = await createTokenAccount(provider, mint, provider.wallet.publicKey);
+    // from = await createTokenAccount(provider, mint, resp.publicKey);
+    // to = await createTokenAccount(provider, mint, resp.publicKey);
 
     console.log("-------------------------------------------------------");
     console.log("initializeState");
-    // console.log("mint ->", mint.toString());
-    // console.log("from ->", from.toString());
-    // console.log("to   ->", to.toString());
+    console.log("mint ->", mint.toString());
+    console.log("from ->", from.toString());
+    console.log("to   ->", to.toString());
     console.log("-------------------------------------------------------");
   };
 
@@ -65,11 +84,13 @@ function App() {
     const program = new Program(idl, programID, provider);
     console.log(program);
 
+    console.log(mint)
+
     const tx = await program.rpc.mintToken(new BN(1000), {
       accounts: {
         authority: provider.wallet.publicKey,
-        mint,
-        to: from,
+        mint:mint,
+        tokenAccount: from,
         tokenProgram: TokenInstructions.TOKEN_PROGRAM_ID,
       },
     });
@@ -173,9 +194,50 @@ function App() {
   async function createMint(provider, authority) {
     if (authority === undefined) {
       authority = provider.wallet.publicKey;
+      console.log("authority")
+      console.log(authority.toString())
     }
+    anchor.setProvider(provider);
+    var resp = provider.wallet;
     const mint = web3.Keypair.generate();
-    const instructions = await createMintInstructions(
+    console.log("mint")
+    console.log(mint.publicKey.toString())
+
+    // const ins = web3.SystemProgram.transfer({
+    //   fromPubkey:resp.publicKey,
+    //   toPubkey:mint.publicKey,
+    //   lamports:2616961
+    // });
+
+    // const t = new web3.Transaction();
+    // t.add(web3.SystemProgram.transfer({
+    //   fromPubkey:resp.publicKey,
+    //   toPubkey:mint.publicKey,
+    //   lamports:2616961
+    // }));
+    // let result = await provider.send(t, [resp]);
+    // console.log(result);
+
+  //     let result = await provider.send(
+  //   new web3.Transaction().add(web3.SystemProgram.transfer({
+  //     fromPubkey:resp.publicKey,
+  //     toPubkey:mint.publicKey,
+  //     lamports:2616961
+  //   })),
+  //   [resp.publicKey]
+  // )
+
+
+  // let connection = new web3.Connection(web3.clusterApiUrl('testnet'));
+
+  let airdropSignature = await provider.connection.requestAirdrop(
+    mint.publicKey,
+    web3.LAMPORTS_PER_SOL,
+  );
+  
+  await provider.connection.confirmTransaction(airdropSignature);
+    
+  const instructions = await createMintInstructions(
       provider,
       authority,
       mint.publicKey
@@ -185,7 +247,13 @@ function App() {
     tx.add(...instructions);
 
     try {
-      const tx_sig = await provider.send(tx, [mint]);
+      // const tx_sig = await provider.send(tx, [mint]);
+      // const tx_sig = anchor.AnchorProvider.sendAndConfirm(
+        const tx_sig = web3.sendAndConfirmTransaction(
+        provider.connection,
+        tx,
+        [mint]
+      );
       console.log("mint tx ->", tx_sig);
     } catch (err) {
       console.log("Transaction Error: ", err);
@@ -195,6 +263,7 @@ function App() {
   }
 
   async function createMintInstructions(provider, authority, mint) {
+    console.log("createmint")
     let instructions = [
       web3.SystemProgram.createAccount({
         fromPubkey: provider.wallet.publicKey,
@@ -203,12 +272,13 @@ function App() {
         lamports: await provider.connection.getMinimumBalanceForRentExemption(82),
         programId: TOKEN_PROGRAM_ID,
       }),
-      TokenInstructions.initializeMint({
-        mint,
-        decimals: 0,
-        mintAuthority: authority,
-      }),
+      // TokenInstructions.initializeMint({
+      //   mint,
+      //   decimals: 0,
+      //   mintAuthority: authority,
+      // }),
     ];
+    console.log(instructions)
     return instructions;
   }
 
@@ -236,12 +306,14 @@ function App() {
     owner,
     lamports
   ) {
+    console.log("createInstr")
+    var resp = provider.wallet;
     if (lamports === undefined) {
       lamports = await provider.connection.getMinimumBalanceForRentExemption(165);
     }
     return [
       web3.SystemProgram.createAccount({
-        fromPubkey: provider.wallet.publicKey,
+        fromPubkey: resp.publicKey,
         newAccountPubkey,
         space: 165,
         lamports,

@@ -1,8 +1,18 @@
+pub mod state;
+mod processor;
+mod error;
+// #[macro_use]
+// pub mod macros;
+mod math;
+// mod util;
+
 use anchor_lang::prelude::*;
 use anchor_lang::solana_program::program::invoke;
 use anchor_spl::token;
 use anchor_spl::token::{MintTo, Token,Mint,TokenAccount,Transfer};
 use mpl_token_metadata::instruction::{create_master_edition_v3, create_metadata_accounts_v2};
+use vipers::validate::Validate;
+use crate::state::pool::Pool;
 
 declare_id!("6mykzhCRDzJvFdfc6GxUWHgTEG5R6qcBQpY6UfK2Kg8n");
 
@@ -10,7 +20,7 @@ declare_id!("6mykzhCRDzJvFdfc6GxUWHgTEG5R6qcBQpY6UfK2Kg8n");
 pub mod contract {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
+    pub fn initialize_pool(ctx: Context<Initialize>) -> Result<()> {
         Ok(())
     }
 
