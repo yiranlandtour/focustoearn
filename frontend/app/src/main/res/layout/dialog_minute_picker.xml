@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_confirm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Timer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:background="@color/bg_light_gray" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="40dp"
+            android:src="@mipmap/angle_right" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:text="25"
+            android:visibility="gone"/>
+
+
+        <com.threedust.app.ui.widget.ScrollPickerView
+            android:id="@+id/sp_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:text="m" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:src="@mipmap/angle_left" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:background="@color/bg_light_gray" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/tv_btn_Yes"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg_btn_start"
+        android:text="OK"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

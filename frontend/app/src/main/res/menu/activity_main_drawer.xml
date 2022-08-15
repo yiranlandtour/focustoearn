@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/nav_home"
+            android:iconTintMode="src_over"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_todo"
+            android:icon="@mipmap/nav_todo"
+            android:title="Todo" />
+        <item
+            android:id="@+id/nav_land"
+            android:icon="@mipmap/nav_land"
+            android:title="Land" />
+        <item
+            android:id="@+id/nav_market"
+            android:icon="@mipmap/nav_market"
+            android:title="Market" />
+        <!-- item
+            android:id="@+id/nav_statistic"
+            android:icon="@mipmap/nav_statistic"
+            android:title="Statistic" / -->
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@mipmap/nav_my_profile"
+            android:title="My profile" />
+    </group>
+</menu>

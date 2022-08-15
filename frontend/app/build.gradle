@@ -1,0 +1,148 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("focus.jks")
+            keyAlias "focus"
+            keyPassword "focus2022"
+            storePassword "focus2022"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.threedust.focus"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.6"
+
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        signingConfig signingConfigs.release
+
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true    // Enable RS support
+        ndk {
+            //APP libs
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+    }
+
+    kotlinOptions { jvmTarget = 1.8}
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            // 批量打包
+            flavorDimensions 'api'
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "xiqu_${variant.productFlavors[0].name}_v${variant.versionName}.apk"
+                }
+            }
+        }
+        debug {
+            signingConfig signingConfigs.release
+            crunchPngs false //
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+        }
+    }
+
+    //noinspection DataBindingWithoutKapt
+    dataBinding { enabled = true }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        incremental = true  //
+    }
+
+    productFlavors {
+        threedust { manifestPlaceholders = [UMENG_CHANNEL_VALUE: "threedust"] }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+    ndkVersion '23.0.7599858'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.7.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+    // rxjava2
+    implementation "io.reactivex.rxjava2:rxjava:2.2.19"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    // Logger
+    implementation 'com.parkingwang:okhttp3-loginterceptor:0.5'
+    //
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    //
+    implementation 'com.github.nukc.stateview:kotlin:2.0.1'
+    //
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+    //
+    implementation('com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    // webview agentweb
+    implementation 'com.just.agentweb:agentweb:4.1.3' //
+    implementation 'com.just.agentweb:filechooser:4.1.3'//
+    implementation 'com.download.library:Downloader:4.1.3'//
+    //smartRefreshLayout
+    implementation 'com.github.scwang90.SmartRefreshLayout:SmartRefreshLayout:V1.1.0'
+    implementation 'com.github.scwang90.SmartRefreshLayout:SmartRefreshHeader:V1.1.0'
+    // banner
+    implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
+    //
+    implementation 'com.facebook.fresco:fresco:1.9.0'
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+    //
+    implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer:v8.1.4-jitpack'
+    //
+    implementation 'com.github.hackware1993:MagicIndicator:1.6.0'
+    //
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'  //
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'   // fragment
+    implementation 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'    // kotlin
+    //Google
+    implementation 'com.google.android:flexbox:1.1.0'
+    //
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation 'org.bitcoinj:bitcoinj-core:0.15.10'
+}
