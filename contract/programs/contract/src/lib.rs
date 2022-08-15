@@ -116,6 +116,8 @@ pub mod contract {
         ];
         msg!("Creator Assigned");
         let symbol = std::string::ToString::to_string("symb");
+        // msg!(ctx.accounts.metadata.key());
+        // msg!(ctx.accounts.token_metadata_program.key());
         invoke(
             &create_metadata_accounts_v2(
                 ctx.accounts.token_metadata_program.key(),
@@ -136,6 +138,8 @@ pub mod contract {
             ),
             account_info.as_slice(),
         )?;
+        
+
         msg!("Metadata Account Created !!!");
         let master_edition_infos = vec![
             ctx.accounts.master_edition.to_account_info(),
