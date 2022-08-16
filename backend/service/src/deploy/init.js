@@ -56,7 +56,9 @@ const anchor = require('@project-serum/anchor');
     );
     return provider;
   }
-
+// export function api_init(){
+//   await initf();
+// }
   export async function initf(){
 
     process.env.ANCHOR_WALLET="/Users/taoyiran/.config/solana/id.json"
