@@ -8,7 +8,7 @@
 </div>
 
 ## Vedio
-Introduction of [Focus]().
+Introduction of [Focus](https://youtu.be/gWXv1P4Xjxw).
 ## About The Project
 
 you can visit the dapp here: [Focus](). Focus allows readers, writers and web 3 enthusiasts, to create and enjoy community created content, read or write stories and create or sell NFTs along with other features.
