@@ -56,7 +56,7 @@ android {
             flavorDimensions 'api'
             android.applicationVariants.all { variant ->
                 variant.outputs.all {
-                    outputFileName = "xiqu_${variant.productFlavors[0].name}_v${variant.versionName}.apk"
+                    outputFileName = "focus_v${variant.versionName}.apk"
                 }
             }
         }

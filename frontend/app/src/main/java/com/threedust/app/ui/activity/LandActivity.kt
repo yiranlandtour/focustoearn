@@ -27,11 +27,14 @@ class LandActivity : BaseActivity() {
 
         if (!ConfigUtils.isHaveLand()) {
             iv_gift_pic.setImageResource(R.mipmap.land_1)
+            ll_gift.visibility = View.GONE
         } else if (!ConfigUtils.isHaveTree()) {
+            ll_gift.visibility = View.GONE
             iv_gift_pic.setImageResource(R.mipmap.tree)
             tv_rarity.text = "for free"
             tv_desc.text = "You can plant this tree, but it cannot be transferred."
         } else {
+            ll_gift.visibility = View.VISIBLE
             iv_gift_pic.setImageResource(R.mipmap.land_1)
             ll_btn.visibility = View.GONE
             tv_price_title.text = "Focus value:"

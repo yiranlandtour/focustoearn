@@ -10,17 +10,17 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="threedustDebug" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleThreedustDebug" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileThreedustDebugSources" />
+        <option name="SELECTED_BUILD_VARIANT" value="threedustRelease" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleThreedustRelease" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileThreedustReleaseSources" />
         <afterSyncTasks>
-          <task>generateThreedustDebugSources</task>
+          <task>generateThreedustReleaseSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/threedust/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/src/threedustDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/threedust/debug" />
-        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestThreedust/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/src/androidTestThreedustDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/threedust/debug" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/threedust/res;file://$MODULE_DIR$/../../../app/src/release/res;file://$MODULE_DIR$/../../../app/src/threedustRelease/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/threedust/release" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
@@ -66,8 +66,8 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/threedustDebug/classes" />
-    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/threedustDebugUnitTest/classes" />
+    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/threedustRelease/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/threedustReleaseUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../app">
       <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />

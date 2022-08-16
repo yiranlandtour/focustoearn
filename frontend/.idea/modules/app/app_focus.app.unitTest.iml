@@ -14,7 +14,7 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
-                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/threedustDebug/R.jar</arg>
+                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/threedustRelease/R.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/66332fa34ae78f40152b619d2d535ff8/jetified-androidx-rs.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/47f7be242e53de1aca1338d5bb7a55ae/databinding-adapters-4.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d6ee860032154a7a35195846f151b687/databinding-runtime-4.0.0-api.jar</arg>
@@ -58,7 +58,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/319e107ab6b0ce3a61798233e3c51c83/jetified-flexbox-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/efd8c350414604f60dba8eee8f14f222/jetified-circleimageview-2.2.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75dad85a4a488f39385013302334ccfc/jetified-bitcoinj-core-0.15.10.jar</arg>
-                <arg>$MODULE_DIR$/../../../solana/build/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../solana/build/intermediates/compile_library_classes_jar/release/classes.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e193c7d0f02aa74527609f9cecbe76e8/jetified-viewbinding-4.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff382e7565e008ef47d404e7129c66e7/fragment-1.2.5-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/07e576a660c8af3ce60c561f6f37d044/jetified-appcompat-resources-1.2.0-api.jar</arg>
@@ -130,24 +130,24 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/96c4f6a31f0e3584bf8e306277a76982/jetified-gsyVideoPlayer-x86_64-v8.1.4-jitpack-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/65d81218db33f85a77f05b7b645248f1/jetified-bcprov-jdk15to18-1.68.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f71ab469910ba58c765d5162bc6ee0d6/jetified-protobuf-java-3.6.1.jar</arg>
-                <arg>$MODULE_DIR$/../../../app/build/intermediates/javac/threedustDebug/classes</arg>
-                <arg>$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/threedustDebug</arg>
+                <arg>$MODULE_DIR$/../../../app/build/intermediates/javac/threedustRelease/classes</arg>
+                <arg>$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/threedustRelease</arg>
                 <arg>$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-30/android.jar</arg>
                 <arg>$USER_HOME$/AppData/Local/Android/Sdk/build-tools/29.0.2/core-lambda-stubs.jar</arg>
               </args>
             </stringArg>
-            <stringArg name="destination" arg="$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/threedustDebugUnitTest" />
+            <stringArg name="destination" arg="$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/threedustReleaseUnitTest" />
             <stringArg name="jvmTarget" arg="1.8" />
-            <stringArg name="moduleName" arg="app_threedustDebug" />
+            <stringArg name="moduleName" arg="app_threedustRelease" />
             <stringArg name="apiVersion" arg="1.5" />
             <stringArg name="languageVersion" arg="1.5" />
           </stringArguments>
           <arrayArguments>
             <arrayArg name="friendPaths">
               <args>
-                <arg>$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/threedustDebug</arg>
-                <arg>$MODULE_DIR$/../../../app/build/intermediates/javac/threedustDebug/classes</arg>
-                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/threedustDebug/R.jar</arg>
+                <arg>$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/threedustRelease</arg>
+                <arg>$MODULE_DIR$/../../../app/build/intermediates/javac/threedustRelease/classes</arg>
+                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/threedustRelease/R.jar</arg>
               </args>
             </arrayArg>
             <arrayArg name="pluginClasspaths">
@@ -176,28 +176,28 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="SELECTED_BUILD_VARIANT" value="threedustDebug" />
-        <option name="ASSEMBLE_TASK_NAME" value="assembleThreedustDebug" />
-        <option name="COMPILE_JAVA_TASK_NAME" value="compileThreedustDebugSources" />
+        <option name="SELECTED_BUILD_VARIANT" value="threedustRelease" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleThreedustRelease" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileThreedustReleaseSources" />
         <afterSyncTasks>
-          <task>generateThreedustDebugSources</task>
+          <task>generateThreedustReleaseSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/threedust/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/src/threedustDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/threedust/debug" />
-        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestThreedust/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/src/androidTestThreedustDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/threedust/debug" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/threedust/res;file://$MODULE_DIR$/../../../app/src/release/res;file://$MODULE_DIR$/../../../app/src/threedustRelease/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/threedust/release" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/threedustDebugUnitTest/out" />
+    <content url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/threedustReleaseUnitTest/out" />
     <content url="file://$MODULE_DIR$/../../../app/src/test" />
-    <content url="file://$MODULE_DIR$/../../../app/src/testDebug" />
+    <content url="file://$MODULE_DIR$/../../../app/src/testRelease" />
     <content url="file://$MODULE_DIR$/../../../app/src/testThreedust" />
-    <content url="file://$MODULE_DIR$/../../../app/src/testThreedustDebug" />
+    <content url="file://$MODULE_DIR$/../../../app/src/testThreedustRelease" />
     <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="app_focus.solana.main" scope="TEST" />

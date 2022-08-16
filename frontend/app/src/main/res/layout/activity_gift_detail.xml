@@ -227,30 +227,6 @@
                         android:layout_alignParentEnd="true" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tomato:"
-                        android:textColor="@color/dark_gray"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:id="@+id/tv_rarity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:textColor="@color/text_dark"
-                        android:text="8%"
-                        android:textSize="18sp"
-                        android:layout_alignParentEnd="true" />
-                </LinearLayout>
-
-
             </LinearLayout>
         </ScrollView>
 
