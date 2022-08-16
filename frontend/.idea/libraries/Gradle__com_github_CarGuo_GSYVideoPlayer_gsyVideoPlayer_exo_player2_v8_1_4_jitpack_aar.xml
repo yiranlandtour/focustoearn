@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-exo_player2:v8.1.4-jitpack@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1952c0245bd86644a80f35e0f845cd1/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1952c0245bd86644a80f35e0f845cd1/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1952c0245bd86644a80f35e0f845cd1/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/978d91cd427415773aa916e76e3ae5e6/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/978d91cd427415773aa916e76e3ae5e6/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/978d91cd427415773aa916e76e3ae5e6/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/76761a8095c81c2f3d29e9fd1e64724f/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/76761a8095c81c2f3d29e9fd1e64724f/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/76761a8095c81c2f3d29e9fd1e64724f/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac2c8ef22c0b70659537e8c396b9af56/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac2c8ef22c0b70659537e8c396b9af56/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac2c8ef22c0b70659537e8c396b9af56/jetified-gsyVideoPlayer-exo_player2-v8.1.4-jitpack/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.CarGuo.GSYVideoPlayer/gsyVideoPlayer-exo_player2/v8.1.4-jitpack/88f1e97ac19a4b5a75184eb2718399d559885bc8/gsyVideoPlayer-exo_player2-v8.1.4-jitpack-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

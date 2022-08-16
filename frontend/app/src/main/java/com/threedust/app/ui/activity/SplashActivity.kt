@@ -56,22 +56,29 @@ class SplashActivity : BaseActivity() {
 
     private fun requestConfig() {
         // 直接进入main页面
-        addSubscription(mApi.getAppConf(SysUtils.getVersionCode()), {
-            MyApp.appConf = it
-            if (ConfigUtils.isFirstUseApp()) {
-                ConfigUtils.storeTaskList(it.task_list)
-                ConfigUtils.setNotFirstUseApp()
-            } else {
-                MyApp.appConf.task_list = ConfigUtils.readTaskList()
-            }
-            SysUtils.postTaskDelay(Runnable {
-                goMainActivity()
-            }, 1000)
-        }, {
-            SysUtils.postTaskDelay(Runnable {
-                goMainActivity()
-            }, 1000)
-        })
+        //addSubscription(mApi.getAppConf(SysUtils.getVersionCode()), {
+        //    MyApp.appConf = it
+        //    if (ConfigUtils.isFirstUseApp()) {
+        //        ConfigUtils.storeTaskList(it.task_list)
+        //        ConfigUtils.setNotFirstUseApp()
+        //    } else {
+        //        MyApp.appConf.task_list = ConfigUtils.readTaskList()
+        //    }
+        //    SysUtils.postTaskDelay(Runnable {
+        //        goMainActivity()
+        //    }, 1000)
+        //}, {
+        //    SysUtils.postTaskDelay(Runnable {
+        //        goMainActivity()
+        //    }, 1000)
+        //})
+        if (ConfigUtils.isFirstUseApp()) {
+            ConfigUtils.addUserCoinCount(10f)
+            ConfigUtils.setNotFirstUseApp()
+        }
+        MyApp.user = ConfigUtils.getUser()
+        SysUtils.postTaskDelay(Runnable {
+            goMainActivity() }, 1000)
     }
 
     private fun checkPermission() {

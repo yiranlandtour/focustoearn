@@ -6,6 +6,7 @@ import android.os.Handler
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.threedust.app.model.entity.AppConf
 import com.threedust.app.model.entity.User
+import com.threedust.app.utils.ConfigUtils
 import com.threedust.app.utils.Logger
 import io.reactivex.exceptions.UndeliverableException
 import io.reactivex.plugins.RxJavaPlugins
@@ -58,6 +59,8 @@ class MyApp : Application() {
         super.onCreate()
         instance = this
         handler = Handler()
+
+        appConf.task_list = ConfigUtils.getTaskList()
 
         initConfig()
     }

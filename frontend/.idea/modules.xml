@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app_focus.iml" filepath="$PROJECT_DIR$/.idea/modules/app_focus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app_focus.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app_focus.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app_focus.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app_focus.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app_focus.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app_focus.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app_focus.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app_focus.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.iml" filepath="$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.main.iml" filepath="$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/solana/app_focus.solana.unitTest.iml" />
+    </modules>
+  </component>
+</project>

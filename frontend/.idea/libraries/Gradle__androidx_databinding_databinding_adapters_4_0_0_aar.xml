@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.databinding:databinding-adapters:4.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3af01f03fd7a53997cd59deb52eaf1a/databinding-adapters-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3af01f03fd7a53997cd59deb52eaf1a/databinding-adapters-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3af01f03fd7a53997cd59deb52eaf1a/databinding-adapters-4.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20151ab9b95e6533393627bc4f567707/databinding-adapters-4.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20151ab9b95e6533393627bc4f567707/databinding-adapters-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20151ab9b95e6533393627bc4f567707/databinding-adapters-4.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eb1a410721ae6b4721c27898ea0c3689/databinding-adapters-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eb1a410721ae6b4721c27898ea0c3689/databinding-adapters-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eb1a410721ae6b4721c27898ea0c3689/databinding-adapters-4.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5809093fc7017f553db3ef6201893f67/databinding-adapters-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5809093fc7017f553db3ef6201893f67/databinding-adapters-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5809093fc7017f553db3ef6201893f67/databinding-adapters-4.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-adapters/4.0.0/a1cdbb95b0fec0281ff1bba2e5573c0c610619cd/databinding-adapters-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

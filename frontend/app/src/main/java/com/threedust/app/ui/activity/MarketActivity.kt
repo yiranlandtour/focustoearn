@@ -31,43 +31,55 @@ class MarketActivity : BaseActivity() {
                 1,
                 "Tomato plants",
                 1.2f,
-                "http://app.xuyaomaoxian.com:8180/focuson_html/gift_imgs/tree.png",
-                "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant."
+                introduce = "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant.",
+                rarity = 7,
+                res_id = R.mipmap.tree,
+                can_buy = true
             ),
             Gift(
                 2,
                 "Seeds",
                 1.2f,
-                "http://app.xuyaomaoxian.com:8180/focuson_html/gift_imgs/seed.png",
-                "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant."
+                introduce = "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant.",
+                rarity = 7,
+                res_id = R.mipmap.seed,
+                can_buy = true
             ),
             Gift(
                 3,
                 "Tomato plants",
                 1.2f,
-                "http://app.xuyaomaoxian.com:8180/focuson_html/gift_imgs/tree.png",
-                "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant."
+                introduce = "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant.",
+                rarity = 7,
+                res_id = R.mipmap.tree,
+                can_buy = true
             ),
             Gift(
                 4,
                 "Seeds",
                 1.2f,
-                "http://app.xuyaomaoxian.com:8180/focuson_html/gift_imgs/seed.png",
-                "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant."
+                introduce = "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant.",
+                rarity = 7,
+                res_id = R.mipmap.seed,
+                can_buy = true
             ),
             Gift(
                 5,
                 "Tomato plants",
                 1.2f,
-                "http://app.xuyaomaoxian.com:8180/focuson_html/gift_imgs/tree.png",
-                "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant."
+                introduce = "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant.",
+                rarity = 7,
+                res_id = R.mipmap.tree,
+                can_buy = true
             ),
             Gift(
                 5,
                 "Seeds",
                 1.2f,
-                "http://app.xuyaomaoxian.com:8180/focuson_html/gift_imgs/seed.png",
-                "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant."
+                introduce = "The tomato is the edible berry of the plant Solanum lycopersium, commonly known as the tomato plant.",
+                rarity = 7,
+                res_id = R.mipmap.seed,
+                can_buy = true
             )
         )
 
@@ -78,6 +90,7 @@ class MarketActivity : BaseActivity() {
 
         mGiftItemAdapter.setOnItemClickListener(object : OnItemClickListener {
             override fun onItemClick(obj: Any?, position: Int) {
+                GiftDetailActivity.gift = obj as Gift?
                 startActivity(Intent(this@MarketActivity, GiftDetailActivity::class.java))
             }
         })
@@ -105,8 +118,7 @@ class MarketActivity : BaseActivity() {
                 llImg.layoutParams.height = hw
                 llImg.layoutParams.width = hw
 
-                imgView.setImageURI(data.image_url)
-                Logger.d(data.image_url)
+                imgView.setImageResource(data.res_id)
             }
         }
     }

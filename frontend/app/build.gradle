@@ -25,7 +25,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0.6"
+        versionName "1.0.0"
 
         multiDexEnabled true
         javaCompileOptions {
@@ -145,4 +145,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     implementation 'org.bitcoinj:bitcoinj-core:0.15.10'
+
+    implementation project(':solana')
 }

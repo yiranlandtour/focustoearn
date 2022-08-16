@@ -48,29 +48,56 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:background="@drawable/bg_bottom_half_round_rect">
 
             <Button
                 android:id="@+id/tv_btn_select"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="15dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/bg_btn_start"
                 android:text="Select wallet"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:visibility="gone"/>
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_wallet_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/shape_btn_unselect"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_wallet_id"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="5g4495sdf343f32adfibukajlgkjntasadr"
+                    android:textColor="@color/pri_green"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:src="@mipmap/copy_wallet_id_click" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/ll_empty"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_margin="15dp"
@@ -91,7 +118,32 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/ll_coin"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_round_rect">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sol" />
+            <TextView
+                android:id="@+id/tv_coin_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"
+                android:text="100 SOL" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

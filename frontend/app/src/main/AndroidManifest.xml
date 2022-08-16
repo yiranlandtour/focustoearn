@@ -62,6 +62,26 @@
 
         </activity>
 
+        <!-- Transaction -->
+        <activity
+            android:name=".ui.activity.TransactionActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:exported="true"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/AppTheme.Slide">
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="focuson.xuyaomaoxian.com"
+                    android:scheme="focuson"
+                    android:path="/TransactionActivity"/>
+            </intent-filter>
+
+        </activity>
 
 
         <!-- Wallet -->

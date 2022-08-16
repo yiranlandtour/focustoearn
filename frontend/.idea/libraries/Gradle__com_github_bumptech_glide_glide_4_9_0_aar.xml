@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.bumptech.glide:glide:4.9.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/00059bb8cea2756a9ce2f758425a4531/jetified-glide-4.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/00059bb8cea2756a9ce2f758425a4531/jetified-glide-4.9.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/00059bb8cea2756a9ce2f758425a4531/jetified-glide-4.9.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/595f0785b0fa8949593b16a9a61ce63a/jetified-glide-4.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/595f0785b0fa8949593b16a9a61ce63a/jetified-glide-4.9.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/595f0785b0fa8949593b16a9a61ce63a/jetified-glide-4.9.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d90daff7a504bfc4813eb4cd88ea3f3/jetified-glide-4.9.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d90daff7a504bfc4813eb4cd88ea3f3/jetified-glide-4.9.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2d90daff7a504bfc4813eb4cd88ea3f3/jetified-glide-4.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e0b57a2f397863e33cb63fa371f20463/jetified-glide-4.9.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e0b57a2f397863e33cb63fa371f20463/jetified-glide-4.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e0b57a2f397863e33cb63fa371f20463/jetified-glide-4.9.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3d4598ef750a2374ee7c23f2234bfa1/jetified-glide-4.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3d4598ef750a2374ee7c23f2234bfa1/jetified-glide-4.9.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3d4598ef750a2374ee7c23f2234bfa1/jetified-glide-4.9.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/744660cafca4274bfdabfffe46af39ec/jetified-glide-4.9.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/744660cafca4274bfdabfffe46af39ec/jetified-glide-4.9.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/744660cafca4274bfdabfffe46af39ec/jetified-glide-4.9.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/4.9.0/b53be1dd9e86c008d96d319510846282f95c49f/glide-4.9.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/4.9.0/5f95e3cc34b116a8024f2af42f66e257d2e28ccb/glide-4.9.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

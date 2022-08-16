@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer:v8.1.4-jitpack@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2433c07cb2529dba8ff48a8506fa13e/jetified-gsyVideoPlayer-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2433c07cb2529dba8ff48a8506fa13e/jetified-gsyVideoPlayer-v8.1.4-jitpack/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2433c07cb2529dba8ff48a8506fa13e/jetified-gsyVideoPlayer-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/202ab173ed9807b01062901c2ec6bfea/jetified-gsyVideoPlayer-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/202ab173ed9807b01062901c2ec6bfea/jetified-gsyVideoPlayer-v8.1.4-jitpack/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/202ab173ed9807b01062901c2ec6bfea/jetified-gsyVideoPlayer-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f33df925f2ab17024db74ae3e937396e/jetified-gsyVideoPlayer-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f33df925f2ab17024db74ae3e937396e/jetified-gsyVideoPlayer-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f33df925f2ab17024db74ae3e937396e/jetified-gsyVideoPlayer-v8.1.4-jitpack/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2fc65ff4f0d7d48877b0291786b8659/jetified-gsyVideoPlayer-v8.1.4-jitpack/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2fc65ff4f0d7d48877b0291786b8659/jetified-gsyVideoPlayer-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f2fc65ff4f0d7d48877b0291786b8659/jetified-gsyVideoPlayer-v8.1.4-jitpack/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.CarGuo.GSYVideoPlayer/GSYVideoPlayer/v8.1.4-jitpack/171a030527b93c9fdfb0fdf4c58c2ec96c7d80f7/gsyVideoPlayer-v8.1.4-jitpack-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -10,6 +10,16 @@ object TimeUtils {
     const val ONE_HOUR_MILLIONS = 60 * ONE_MINUTE_MILLIONS
     const val ONE_DAY_MILLIONS = 24 * ONE_HOUR_MILLIONS
 
+    fun getTimeText(minutes: Int?): String {
+        minutes?.let {
+            if (minutes >= 60) {
+                return "%.1f".format(minutes / 60f) + "h"
+            }
+            return minutes.toString() + "m"
+        }
+        return "0m"
+    }
+
     fun currentTime(): Long {
         return System.currentTimeMillis() / 1000
     }

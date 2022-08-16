@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-proxy_cache:v8.1.4-jitpack@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e405398a9820171f24534a29281ca57c/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e405398a9820171f24534a29281ca57c/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e405398a9820171f24534a29281ca57c/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d64bb6260c8dcc1ca023071ba99daab4/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d64bb6260c8dcc1ca023071ba99daab4/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d64bb6260c8dcc1ca023071ba99daab4/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd4ed54ccaa0bda4f6e137f1610c2bce/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd4ed54ccaa0bda4f6e137f1610c2bce/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd4ed54ccaa0bda4f6e137f1610c2bce/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1ea3537cf3e2fe833732d60c404f16c6/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1ea3537cf3e2fe833732d60c404f16c6/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1ea3537cf3e2fe833732d60c404f16c6/jetified-gsyVideoPlayer-proxy_cache-v8.1.4-jitpack/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.CarGuo.GSYVideoPlayer/gsyVideoPlayer-proxy_cache/v8.1.4-jitpack/38b59b2f6fa39da9051a58a375fc5b06ebbd70ce/gsyVideoPlayer-proxy_cache-v8.1.4-jitpack-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

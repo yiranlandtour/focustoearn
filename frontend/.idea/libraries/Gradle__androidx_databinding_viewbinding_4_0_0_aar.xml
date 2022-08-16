@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.databinding:viewbinding:4.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2bfca14b65453372c82ced49ab95653e/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8dfcc53c86efedcd5c6f1b85281b438e/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b0c289b07bac83b87b0ee5009e2faf7d/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3b14cea68a386cbb60be6ffaa1fe9589/jetified-viewbinding-4.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3b14cea68a386cbb60be6ffaa1fe9589/jetified-viewbinding-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3b14cea68a386cbb60be6ffaa1fe9589/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0127c7e8ab78030049b1315ddb8b42f5/jetified-viewbinding-4.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0127c7e8ab78030049b1315ddb8b42f5/jetified-viewbinding-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0127c7e8ab78030049b1315ddb8b42f5/jetified-viewbinding-4.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4cc0930b6a3641132f6cbfd686866938/jetified-viewbinding-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4cc0930b6a3641132f6cbfd686866938/jetified-viewbinding-4.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4cc0930b6a3641132f6cbfd686866938/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d9490c716dd08ab361a212e01647361f/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0d7616658dbdcecfe93ad99fb0fa1f3b/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c8cd5bf7af7ca05170ae21107dfb3f3/jetified-viewbinding-4.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5cb3a142b7cc36320db310bd5869658d/jetified-viewbinding-4.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5cb3a142b7cc36320db310bd5869658d/jetified-viewbinding-4.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5cb3a142b7cc36320db310bd5869658d/jetified-viewbinding-4.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.databinding/viewbinding/4.0.0/6530ac9b24634e58fdfaf80b429c12f7b53ea30b/viewbinding-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -6,7 +6,7 @@ object JsonUtils {
     private var gson = Gson()
 
     fun toJson(obj: Any): String {
-        Logger.printD(obj)
+        //Logger.printD(obj)
         var ret: String = ""
         try {
             ret = gson.toJson(obj)

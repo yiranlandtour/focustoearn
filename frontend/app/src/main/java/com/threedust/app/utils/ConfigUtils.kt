@@ -72,43 +72,97 @@ object ConfigUtils {
 
     // get user from local storage
     fun getUser(): User {
-        val user : User? = JsonUtils.fromJson(getString("user", ""), User::class.java)
-        if (user == null) return User()
+        var user : User? = JsonUtils.fromJson(getString("user", ""), User::class.java)
+        if (user == null) user = User()
+        MyApp.user = user
         return user
+    }
+
+    fun storeUser() {
+        putString("user", JsonUtils.toJson(MyApp.user))
     }
 
     // whether login or not
     fun isLogin(): Boolean {
-        return getUser().wallet_id.isNotEmpty()
+        return MyApp.user.wallet_id.isNotEmpty()
     }
 
     fun login(wallet_id : String) {
-        getUser().wallet_id = wallet_id
+        MyApp.user.wallet_id = wallet_id
+        storeUser()
     }
 
     fun logout() {
-        getUser().wallet_id = ""
+        MyApp.user.wallet_id = ""
+        putString("phantom_session", "")
+        putString("phantom_public_key", "")
+        storeUser()
+    }
+
+    fun getSession() : String {
+        return getString("phantom_session", "")
+    }
+
+    fun storeSession(session: String?) {
+        session?.let { putString("phantom_session", it) }
+    }
+
+    fun getUserWalletPubKey() : String {
+        return getString("phantom_user_public_key", "")
+    }
+
+    fun storeUserWalletPubKey(key: String?) {
+        key?.let { putString("phantom_user_public_key", it) }
+    }
+
+    fun getPhantomEncPubKey() : String {
+        return getString("phantom_public_key", "")
+    }
+
+    fun storePhantomEncPubKey(key: String?) {
+        key?.let { putString("phantom_public_key", it) }
     }
 
     fun isHaveLand() : Boolean {
-        return false
+        return getBoolean("have_land", false)
+    }
+
+    fun recordBuyLand() {
+        putBoolean("have_land", true)
+    }
+
+    fun isHaveTree() : Boolean {
+        return getBoolean("have_tree", false)
+    }
+
+    fun recordBuyTree() {
+        putBoolean("have_tree", true)
+    }
+
+    fun getUserCoinCount() : Float {
+        return MyApp.user.coin_num
+    }
+
+    fun addUserCoinCount(coin: Float) {
+        MyApp.user.coin_num += coin
+        storeUser()
     }
 
     fun isFirstUseApp() : Boolean {
-        return !ConfigUtils.getBoolean("not_app_first", false)
+        return !getBoolean("not_app_first", false)
     }
 
     fun setNotFirstUseApp() {
-        ConfigUtils.putBoolean("not_app_first", true)
+        putBoolean("not_app_first", true)
     }
 
     fun storeTaskList(taskList: ArrayList<TaskItem>) {
         putString("key_task_list", JsonUtils.toJson(taskList))
     }
 
-    fun readTaskList() : ArrayList<TaskItem> {
+    fun getTaskList() : ArrayList<TaskItem> {
         val taskList : ArrayList<TaskItem>? = Gson().fromJson(getString("key_task_list", ""), object: TypeToken<ArrayList<TaskItem>>() {}.type)
-        if (taskList == null) return AppConf().task_list
+        if (taskList == null || taskList.isEmpty()) return AppConf().task_list
         return taskList
     }
 
@@ -158,5 +212,17 @@ object ConfigUtils {
         val sp: SharedPreferences = MyApp.getContext()
             .getSharedPreferences(CONFIG_FILE_NAME, Context.MODE_PRIVATE)
         return sp.getLong(key, defValue)
+    }
+
+    fun putFloat(key: String, value: Float) {
+        val sp: SharedPreferences = MyApp.getContext()
+            .getSharedPreferences(CONFIG_FILE_NAME, Context.MODE_PRIVATE)
+        sp.edit().putFloat(key, value).apply()
+    }
+
+    fun getFloat(key: String, defValue: Float): Float {
+        val sp: SharedPreferences = MyApp.getContext()
+            .getSharedPreferences(CONFIG_FILE_NAME, Context.MODE_PRIVATE)
+        return sp.getFloat(key, defValue)
     }
 }

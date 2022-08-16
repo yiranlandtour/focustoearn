@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.CarGuo:GSYIjkJava:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e1f6cdb0b1b7640c4ee07c3b8807969d/jetified-GSYIjkJava-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e1f6cdb0b1b7640c4ee07c3b8807969d/jetified-GSYIjkJava-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e1f6cdb0b1b7640c4ee07c3b8807969d/jetified-GSYIjkJava-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bceaa1c0f7509e1747a326886b9cd69/jetified-GSYIjkJava-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bceaa1c0f7509e1747a326886b9cd69/jetified-GSYIjkJava-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bceaa1c0f7509e1747a326886b9cd69/jetified-GSYIjkJava-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/54b22a615150c821d334723eca2341cc/jetified-GSYIjkJava-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/54b22a615150c821d334723eca2341cc/jetified-GSYIjkJava-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/54b22a615150c821d334723eca2341cc/jetified-GSYIjkJava-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/779025d142ecb514027ebb40dc6c33f3/jetified-GSYIjkJava-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/779025d142ecb514027ebb40dc6c33f3/jetified-GSYIjkJava-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/779025d142ecb514027ebb40dc6c33f3/jetified-GSYIjkJava-1.0.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.CarGuo/GSYIjkJava/1.0.0/c0dd9395053840197f86528bd951add19c4c12bf/GSYIjkJava-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

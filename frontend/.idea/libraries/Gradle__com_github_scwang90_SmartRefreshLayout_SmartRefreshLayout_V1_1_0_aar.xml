@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.scwang90.SmartRefreshLayout:SmartRefreshLayout:V1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/359bd83c7e1eac4d8686e0201c7c570b/jetified-SmartRefreshLayout-V1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/359bd83c7e1eac4d8686e0201c7c570b/jetified-SmartRefreshLayout-V1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/359bd83c7e1eac4d8686e0201c7c570b/jetified-SmartRefreshLayout-V1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ff45976670b88418f615bae666fa699/jetified-SmartRefreshLayout-V1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ff45976670b88418f615bae666fa699/jetified-SmartRefreshLayout-V1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ff45976670b88418f615bae666fa699/jetified-SmartRefreshLayout-V1.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/30a70b549b9bdcf0874aa4e6d6e6e024/jetified-SmartRefreshLayout-V1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/30a70b549b9bdcf0874aa4e6d6e6e024/jetified-SmartRefreshLayout-V1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/30a70b549b9bdcf0874aa4e6d6e6e024/jetified-SmartRefreshLayout-V1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cff71a7b695355fa52ee37780a819cae/jetified-SmartRefreshLayout-V1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cff71a7b695355fa52ee37780a819cae/jetified-SmartRefreshLayout-V1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cff71a7b695355fa52ee37780a819cae/jetified-SmartRefreshLayout-V1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c26d6cba0d6fbdcf07abc1776006c0dc/jetified-SmartRefreshLayout-V1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c26d6cba0d6fbdcf07abc1776006c0dc/jetified-SmartRefreshLayout-V1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c26d6cba0d6fbdcf07abc1776006c0dc/jetified-SmartRefreshLayout-V1.1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.scwang90.SmartRefreshLayout/SmartRefreshLayout/V1.1.0/ff9e9e694bd70fa7af28ecccb7ac19a50d11480b/SmartRefreshLayout-V1.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.scwang90.SmartRefreshLayout/SmartRefreshLayout/V1.1.0/37335ccfd8929a6db4ae276b13e704a983bc2375/SmartRefreshLayout-V1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

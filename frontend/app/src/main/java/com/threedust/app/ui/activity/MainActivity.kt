@@ -3,8 +3,10 @@ package com.threedust.app.ui.activity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
 import com.threedust.app.MyApp
@@ -24,7 +26,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     var mIsInTask: Boolean = false
     var mMinute: Int = 0
     var mTask: TaskItem? = null
-    var mTaskCoinNum: Float = 4.66f
+    var mTaskCoinNum: Float = 0f
+    var mSound: SoundUtil? = null
 
     @SuppressLint("MissingSuperCall")
     override fun onSaveInstanceState(outState: Bundle) {
@@ -33,12 +36,19 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     override fun layoutId(): Int = R.layout.activity_main
 
     override fun initView() {
+
+        mSound = SoundUtil(this)
+
+        Logger.d(Base58.decode(Constant.focusSecretKey).size)
+
         nav_view.itemIconTintList = null // icon no color
 
         mTask = MyApp.appConf.task_list[0]
 
         tv_task_name.text = mTask?.title
         iv_left_menu.setOnClickListener {
+
+            refreshView()
             drawer_layout.openDrawer(GravityCompat.START)
         }
 
@@ -60,6 +70,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                         override fun trigger(minute: Any) {
                             mMinute = minute as Int
                             wg_timer.setMinute(mMinute)
+                            mTaskCoinNum = mMinute * Constant.coinScale
                         }
                     }).show()
                 }
@@ -69,23 +80,40 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         btn_start.setOnClickListener {
             if (!mIsInTask) {
                 if (mMinute > 0) {
-                    wg_timer.setSecondCountDown( { startTaskUI() }, {
-                            endTaskUI()
-                            BeautyDialog(this).headImage(R.mipmap.good_finger).title("Congratulations, keep it up!")
-                                .showCoinImg().coinNum(mTaskCoinNum)
-                                .okBtnClickListener{
-                                    // check if the user has any land
-                                    if (!ConfigUtils.isHaveLand()) {
-                                        BeautyDialog(this@MainActivity).headImage(R.mipmap.land_marker)
-                                            .title("You need a piece of land before planting a tree, go buy a piece of land?")
-                                            .okBtnTitle("OK").okBtnClickListener{
-                                                startActivity(Intent(this@MainActivity, LandActivity::class.java))
-                                            }.show()
-                                    }
-                                }.show()
-                            // make sound
-                            // add coin to user's account
+                    wg_timer.setSecondCountDown({ startTaskUI() }, {
+                        mTask?.let {
+                            for (i in 0 until MyApp.appConf.task_list.size) {
+                                if (it.id == MyApp.appConf.task_list[i].id) {
+                                    it.total_count += 1
+                                    it.total_time += mMinute
+                                    ConfigUtils.storeTaskList(MyApp.appConf.task_list)
+                                    break
+                                }
+                            }
                         }
+                        endTaskUI()
+                        mSound?.playSound()
+                        ConfigUtils.addUserCoinCount(mTaskCoinNum)
+                        BeautyDialog(this).headImage(R.mipmap.good_finger)
+                            .title("Congratulations, keep it up!")
+                            .showCoinImg().coinNum(mTaskCoinNum)
+                            .okBtnClickListener {
+                                mSound?.stopSound()
+                                // check if the user has any land
+                                if (!ConfigUtils.isHaveLand()) {
+                                    BeautyDialog(this@MainActivity).headImage(R.mipmap.land_marker)
+                                        .title("You need a piece of land before planting a tree, go buy a piece of land?")
+                                        .okBtnTitle("OK").okBtnClickListener {
+                                            startActivity(
+                                                Intent(
+                                                    this@MainActivity,
+                                                    LandActivity::class.java
+                                                )
+                                            )
+                                        }.show()
+                                }
+                            }.show()
+                    }
                     )
                 } else {
                     SysUtils.showToast("Please set the countdown first ")
@@ -105,30 +133,28 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     }.show()
             }
         }
-
         val loginHeadView = nav_view.getHeaderView(0).findViewById<View>(R.id.ll_login_head)
         val walletHeadView = nav_view.getHeaderView(0).findViewById<View>(R.id.ll_wallet_head)
+        val tvWalletId = nav_view.getHeaderView(0).findViewById<TextView>(R.id.tv_wallet_id)
         loginHeadView.setOnClickListener {
             SelectWalletDialog(this)
                 .title("Select Wallet")
-                .walletBtnClickListener { walletId ->
-                ConfigUtils.login(walletId)
-                loginHeadView.visibility = View.GONE
-                walletHeadView.visibility = View.VISIBLE
-                tv_btn_logout.visibility = View.VISIBLE
-            }.show()
+                .walletBtnClickListener {
+                    drawer_layout.closeDrawer(GravityCompat.START)
+                }.show()
+        }
+        walletHeadView.setOnClickListener {
+            startActivity(Intent(this, WalletActivity::class.java))
         }
 
         tv_btn_logout.setOnClickListener {
-            ConfirmDialog(this).
-                title("Are you sure to logout?")
-                .okBtnClickListener{
-                    loginHeadView.visibility = View.VISIBLE
-                    walletHeadView.visibility = View.GONE
-                    tv_btn_logout.visibility = View.GONE
+            ConfirmDialog(this).title("Are you sure to logout?")
+                .okBtnClickListener {
+                    ConfigUtils.logout()
+                    refreshView()
                 }.show()
         }
-
+        refreshView()
         nav_view.setNavigationItemSelectedListener(this)
     }
 
@@ -159,7 +185,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         Logger.d(UIUtils.screenWidthDp, UIUtils.screenHeightDp)
 
         val keyPair = NaCl.box.keyPair()
-        Logger.d(Base58.encode(keyPair.first).toString(), Base58.encode(keyPair.second).toString())
+        //Logger.d(Base58.encode(keyPair.first).toString(), Base58.encode(keyPair.second).toString())
     }
 
     override fun retryRequest() {
@@ -186,5 +212,26 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         //drawer_layout.closeDrawer(GravityCompat.START)
         return false
+    }
+
+    fun refreshTaskTime() {
+
+    }
+
+    private fun refreshView() {
+        val loginHeadView = nav_view.getHeaderView(0).findViewById<View>(R.id.ll_login_head)
+        val walletHeadView = nav_view.getHeaderView(0).findViewById<View>(R.id.ll_wallet_head)
+        val tvWalletId = nav_view.getHeaderView(0).findViewById<TextView>(R.id.tv_wallet_id)
+        if (ConfigUtils.isLogin()) {
+            loginHeadView.visibility = View.GONE
+            walletHeadView.visibility = View.VISIBLE
+            tv_btn_logout.visibility = View.VISIBLE
+            tvWalletId.text = MyApp.user.wallet_id
+        } else {
+            loginHeadView.visibility = View.VISIBLE
+            walletHeadView.visibility = View.GONE
+            tv_btn_logout.visibility = View.GONE
+        }
+
     }
 }

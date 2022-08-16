@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":solana:unitTest" external.linked.project.path="$MODULE_DIR$/../../../solana" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="5" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <flagArguments>
+            <flagArg name="noReflect" arg="true" />
+            <flagArg name="noStdlib" arg="true" />
+          </flagArguments>
+          <stringArguments>
+            <stringArg name="classpath">
+              <args>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2cbc5ee99d6c95adcd314356a160bb8c/jetified-kotlin-stdlib-jdk7-1.5.21.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7a59f986be508447cec28484e55f54f1/jetified-moshi-kotlin-1.12.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9540ac9948b50ff1c031cd703d1b0324/jetified-okhttp-4.9.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/27b6f8a2af919bbb938ec7a84a8dde03/jetified-kotlin-reflect-1.5.21.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53c071fdabe1eef4ac5d9a9dbce60f6a/jetified-moshi-1.12.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dbb2f7538615bea6fef2bc48c134785e/jetified-okio-jvm-2.10.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd029ac8ea7c3695c86bc306ac71906f/jetified-kotlin-stdlib-1.5.21.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ce23135622b630abb15b30dd3aebd09/jetified-annotations-13.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8abca848536314e710dcbe4894674ede/jetified-kotlin-stdlib-common-1.5.21.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75dad85a4a488f39385013302334ccfc/jetified-bitcoinj-core-0.15.10.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/65d81218db33f85a77f05b7b645248f1/jetified-bcprov-jdk15to18-1.68.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f71ab469910ba58c765d5162bc6ee0d6/jetified-protobuf-java-3.6.1.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9e147bcfa64085853626f4ad428734da/jetified-eddsa-0.3.0.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/094a2b659c2f4ecf93daebaf4faa77c5/jetified-junit-4.13.2.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e45588b7afa654aacd7866f51a8b7f4/jetified-hamcrest-core-1.3.jar</arg>
+                <arg>$MODULE_DIR$/../../../solana/build/intermediates/javac/debug/classes</arg>
+                <arg>$MODULE_DIR$/../../../solana/build/tmp/kotlin-classes/debug</arg>
+                <arg>$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-30/android.jar</arg>
+                <arg>$USER_HOME$/AppData/Local/Android/Sdk/build-tools/30.0.2/core-lambda-stubs.jar</arg>
+              </args>
+            </stringArg>
+            <stringArg name="destination" arg="$MODULE_DIR$/../../../solana/build/tmp/kotlin-classes/debugUnitTest" />
+            <stringArg name="jvmTarget" arg="1.8" />
+            <stringArg name="moduleName" arg="solana_debug" />
+            <stringArg name="apiVersion" arg="1.5" />
+            <stringArg name="languageVersion" arg="1.5" />
+          </stringArguments>
+          <arrayArguments>
+            <arrayArg name="friendPaths">
+              <args>
+                <arg>$MODULE_DIR$/../../../solana/build/tmp/kotlin-classes/debug</arg>
+                <arg>$MODULE_DIR$/../../../solana/build/intermediates/javac/debug/classes</arg>
+              </args>
+            </arrayArg>
+            <arrayArg name="pluginClasspaths" />
+            <arrayArg name="pluginOptions" />
+          </arrayArguments>
+        </compilerArguments>
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../solana/src/main/res;file://$MODULE_DIR$/../../../solana/src/debug/res;file://$MODULE_DIR$/../../../solana/build/generated/res/rs/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../solana/src/androidTest/res;file://$MODULE_DIR$/../../../solana/src/androidTestDebug/res;file://$MODULE_DIR$/../../../solana/build/generated/res/rs/androidTest/debug" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../solana/build/generated/ap_generated_sources/debugUnitTest/out" />
+    <content url="file://$MODULE_DIR$/../../../solana/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../solana/src/test/java" isTestSource="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../solana/src/testDebug" />
+    <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.moshi:moshi-kotlin:1.12.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okhttp3:okhttp:4.9.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.5.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.moshi:moshi:1.12.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup.okio:okio:2.10.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.5.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.5.21" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.bitcoinj:bitcoinj-core:0.15.10" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.bouncycastle:bcprov-jdk15to18:1.68" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.protobuf:protobuf-java:3.6.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: net.i2p.crypto:eddsa:0.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.13.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="app_focus.solana.main" />
+</module>

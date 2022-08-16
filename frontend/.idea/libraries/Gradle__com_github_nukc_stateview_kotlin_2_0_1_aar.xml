@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.nukc.stateview:kotlin:2.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4235d70b069a1590eec205858bbeb8a7/jetified-kotlin-2.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4235d70b069a1590eec205858bbeb8a7/jetified-kotlin-2.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4235d70b069a1590eec205858bbeb8a7/jetified-kotlin-2.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a8dbf83a711b0507d6008fadf2e2da89/jetified-kotlin-2.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a8dbf83a711b0507d6008fadf2e2da89/jetified-kotlin-2.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a8dbf83a711b0507d6008fadf2e2da89/jetified-kotlin-2.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6efbdd4ac85c1e5e5ecbf4716159c96a/jetified-kotlin-2.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6efbdd4ac85c1e5e5ecbf4716159c96a/jetified-kotlin-2.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6efbdd4ac85c1e5e5ecbf4716159c96a/jetified-kotlin-2.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ee34dd348e28c6d07245028207c5a48/jetified-kotlin-2.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ee34dd348e28c6d07245028207c5a48/jetified-kotlin-2.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ee34dd348e28c6d07245028207c5a48/jetified-kotlin-2.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nukc.stateview/kotlin/2.0.1/9242f3336f41c2bd446c7f98ab64681f953e110b/kotlin-2.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nukc.stateview/kotlin/2.0.1/7e3b190382fa177f24db313e029ed512a2bc16c7/kotlin-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

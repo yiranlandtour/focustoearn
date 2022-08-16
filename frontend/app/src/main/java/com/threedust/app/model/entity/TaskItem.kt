@@ -5,5 +5,5 @@ data class TaskItem(
     var title: String,
     var color: String,
     var total_count: Int = 0,
-    var total_time: Int = 0
+    var total_time: Int = 0 // minutes
 )

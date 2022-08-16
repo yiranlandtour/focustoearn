@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.bingoogolapple:bga-banner:2.2.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f29c0a08326cabc331981044df5b4aa1/jetified-bga-banner-2.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f29c0a08326cabc331981044df5b4aa1/jetified-bga-banner-2.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f29c0a08326cabc331981044df5b4aa1/jetified-bga-banner-2.2.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df560e88bf2431ca2f4d3b6ca11b938c/jetified-bga-banner-2.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df560e88bf2431ca2f4d3b6ca11b938c/jetified-bga-banner-2.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/df560e88bf2431ca2f4d3b6ca11b938c/jetified-bga-banner-2.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecdd670c71ce3238c3a4c2c633019d04/jetified-bga-banner-2.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecdd670c71ce3238c3a4c2c633019d04/jetified-bga-banner-2.2.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ecdd670c71ce3238c3a4c2c633019d04/jetified-bga-banner-2.2.4/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ab6e796e7904c1e9eee501860ccbccf/jetified-bga-banner-2.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ab6e796e7904c1e9eee501860ccbccf/jetified-bga-banner-2.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ab6e796e7904c1e9eee501860ccbccf/jetified-bga-banner-2.2.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc13e6bd1b38af2e317385094790d23b/jetified-bga-banner-2.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc13e6bd1b38af2e317385094790d23b/jetified-bga-banner-2.2.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dc13e6bd1b38af2e317385094790d23b/jetified-bga-banner-2.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1138bb1ca5bdcf55127dd767153dabf8/jetified-bga-banner-2.2.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1138bb1ca5bdcf55127dd767153dabf8/jetified-bga-banner-2.2.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1138bb1ca5bdcf55127dd767153dabf8/jetified-bga-banner-2.2.4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bingoogolapple/bga-banner/2.2.4/44d9510988d6e53cb2602c58eaa1cce3ee529c5c/bga-banner-2.2.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.bingoogolapple/bga-banner/2.2.4/a9840bab12f1228ec42e677353c9c6af97750f20/bga-banner-2.2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

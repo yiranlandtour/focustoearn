@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.Gravity
 import com.google.android.flexbox.*
+import com.threedust.app.MyApp
 import com.threedust.app.R
 import com.threedust.app.base.BaseDialog
 import com.threedust.app.model.entity.TaskItem
@@ -36,14 +37,10 @@ class BottomDialog(context: Context) : BaseDialog(context, R.style.dialog_bottom
 
         btn_edit.setOnClickListener {
             context.startActivity(Intent(context, TodoListActivity::class.java))
+            dismiss()
         }
 
-        val taskNameArr = arrayListOf<TaskItem>(
-            TaskItem(1, "Study", "green"),
-            TaskItem(2, "Play", "pink"),
-            TaskItem(3, "Work", "blue"),
-            TaskItem(4, "Football", "yellow"),
-            TaskItem(5, "Sleep", "red"))
+        val taskNameArr = MyApp.appConf.task_list
 
         mTaskNameItemAdapter = RVTaskNameAdapter(context, taskNameArr)
         val flexBoxLM = FlexboxLayoutManager(context)
