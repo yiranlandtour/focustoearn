@@ -1,7 +1,5 @@
 pub mod state;
 mod processor;
-mod error;
-// #[macro_use]
 // pub mod macros;
 mod math;
 // mod util;
@@ -20,8 +18,9 @@ declare_id!("6mykzhCRDzJvFdfc6GxUWHgTEG5R6qcBQpY6UfK2Kg8n");
 pub mod contract {
     use super::*;
 
-    pub fn initialize_pool(ctx: Context<Initialize>) -> Result<()> {
-        Ok(())
+    #[access_control(ctx.accounts.validate())]
+    pub fn initialize_pool(ctx: Context<InitializePool>,bump:u8) -> Result<()> {
+        InitializePool::process(ctx, bump)
     }
 
     pub fn init_token(ctx: Context<Initialize>) -> Result<()>{
@@ -169,34 +168,39 @@ pub mod contract {
         msg!("Master Edition Nft Minted !!!");
         Ok(())
     }
-    // #[access_control(ctx.accounts.validate())]
-    // pub fn initialize_pool(ctx: Context<InitializePool>,bump:u8) -> ProgramResult{
-    //     processor::init::initialize_pool(ctx, bump)
-    // }
 
-    // #[access_control(ctx.accounts.validate())]
-    // pub fn initialize_one_pool(ctx: Context<InitializeOnePool>,bump:u8) -> ProgramResult{
-    //     processor::init::initialize_one_pool(ctx, bump)
-    // }
-
-    // #[access_control(ctx.accounts.validate())]
-    // pub fn initialize_lp_price(
-    //     ctx: Context<InitializeLpPrice>,
-    //     bump:u8,
-    //     lp_price_expo:u8
-    // ) -> ProgramResult {
-    
-    //     InitializeLpPrice::process(ctx,lp_price_expo)
-    // }
-    // #[access_control(ctx.accounts.validate())]
-    // pub fn initialize_withdraw_lp_account(ctx: Context<InitializeWithdrawLpAccount>) -> ProgramResult {
-    //     InitializeWithdrawLpAccount::process(ctx)
-    // }
 }
 
 #[derive(Accounts)]
 pub struct Initialize {}
 
+#[derive(Accounts)]
+#[instruction(bump: u8,reward_number:u8)]
+pub struct InitializePool<'info> {
+    /// CHECK: This is not dangerous because we don't read or write from this account
+    pub init_authority:Signer<'info>,
+    /// CHECK: This is not dangerous because we don't read or write from this account
+    pub base:AccountInfo<'info>,
+    #[account(
+        init,
+        seeds = [
+            b"Pool".as_ref(),
+            base.key().to_bytes().as_ref()
+        ],
+        bump,
+        payer = payer,
+        space = (8 + 591 + 32*(reward_number as u32+2)+4) as usize
+    )]
+    pub pool: Box<Account<'info, Pool>>,
+
+    #[account(mut)]
+    pub payer: Signer<'info>,
+    /// [System] program.
+    pub system_program: Program<'info, System>,
+    /// CHECK: This is not dangerous because we don't read or write from this account
+    owner:AccountInfo<'info>,
+
+}
 
 #[derive(Accounts)]
 pub struct MintNFT<'info> {
