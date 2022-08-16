@@ -1,0 +1,272 @@
+{
+  "version": "0.1.0",
+  "name": "contract",
+  "instructions": [
+    {
+      "name": "initializePool",
+      "accounts": [],
+      "args": []
+    },
+    {
+      "name": "initToken",
+      "accounts": [],
+      "args": []
+    },
+    {
+      "name": "mintToken",
+      "accounts": [
+        {
+          "name": "mint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "transferToken",
+      "accounts": [
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "from",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "to",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "fromAuthority",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "nftTransfer",
+      "accounts": [],
+      "args": []
+    },
+    {
+      "name": "withdrawToken",
+      "accounts": [],
+      "args": []
+    },
+    {
+      "name": "mintNft",
+      "accounts": [
+        {
+          "name": "mintAuthority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "metadata",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenMetadataProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "payer",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "masterEdition",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "creatorKey",
+          "type": "publicKey"
+        },
+        {
+          "name": "uri",
+          "type": "string"
+        },
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Pool",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "version",
+            "type": "u8"
+          },
+          {
+            "name": "base",
+            "type": "publicKey"
+          },
+          {
+            "name": "owner",
+            "type": "publicKey"
+          },
+          {
+            "name": "pendingOwner",
+            "type": "publicKey"
+          },
+          {
+            "name": "ammId",
+            "type": "publicKey"
+          },
+          {
+            "name": "ammVersion",
+            "type": "u8"
+          },
+          {
+            "name": "lpMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "lpSupply",
+            "type": "publicKey"
+          },
+          {
+            "name": "coinSupply",
+            "type": "publicKey"
+          },
+          {
+            "name": "pcSupply",
+            "type": "publicKey"
+          },
+          {
+            "name": "addLpWithdrawAmountAuthority",
+            "type": "publicKey"
+          },
+          {
+            "name": "compoundAuthority",
+            "type": "publicKey"
+          },
+          {
+            "name": "coinMintPrice",
+            "type": "publicKey"
+          },
+          {
+            "name": "coinMintDecimal",
+            "type": "u8"
+          },
+          {
+            "name": "pcMintPrice",
+            "type": "publicKey"
+          },
+          {
+            "name": "pcMintDecimal",
+            "type": "u8"
+          },
+          {
+            "name": "ammOpenOrders",
+            "type": "publicKey"
+          },
+          {
+            "name": "ammCoinMintSupply",
+            "type": "publicKey"
+          },
+          {
+            "name": "ammPcMintSupply",
+            "type": "publicKey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "lpPriceAccount",
+            "type": "publicKey"
+          },
+          {
+            "name": "isFarm",
+            "type": "bool"
+          },
+          {
+            "name": "farmPoolId",
+            "type": "publicKey"
+          },
+          {
+            "name": "farmPoolVersion",
+            "type": "u8"
+          },
+          {
+            "name": "farmLedger",
+            "type": "publicKey"
+          },
+          {
+            "name": "rewardSupply",
+            "type": {
+              "vec": "publicKey"
+            }
+          },
+          {
+            "name": "pendingLpAmount",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}
